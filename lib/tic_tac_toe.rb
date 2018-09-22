@@ -115,5 +115,40 @@ class TicTacToe
     end
   end
 
+  def over? 
+  if draw?()
+    return true
+  end
+
+  if won? ()
+    return true
+
+  else
+    return false
+  end
+end
+
+def winner 
+
+  if draw? ()
+    return nil
+  end
+  if won? ()
+
+  WIN_COMBINATIONS.each do |set1|
+    if (@board[set1[0]] == @board[set1[1]] && @board[set1[1]]  == @board[set1[2]])
+      if (@board[set1[0]] == "X")
+        return "X"
+      end
+      if (@board[set1[0]] == "O")
+        return "O"
+      end
+    end
+  end
+end
+end
+
+
+
 
 end
