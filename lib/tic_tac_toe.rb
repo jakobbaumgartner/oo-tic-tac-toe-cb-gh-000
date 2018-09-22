@@ -129,10 +129,10 @@ end
 
 def winner ()
 
-  if draw? ()
+  if draw?()
     return nil
   end
-  if won? ()
+  if won?()
 
   WIN_COMBINATIONS.each do |set1|
     if (@board[set1[0]] == @board[set1[1]] && @board[set1[1]]  == @board[set1[2]])
