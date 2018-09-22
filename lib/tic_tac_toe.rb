@@ -64,33 +64,56 @@ class TicTacToe
 
   def won?
 
-  #empty field
-  empty = @board.all? do |field|
-    field == " "
-  end
+    #empty field
+    empty = @board.all? do |field|
+      field == " "
+    end
 
-  if empty
-    return false
-  end
+    if empty
+      return false
+    end
 
-  #win
-  WIN_COMBINATIONS.each do |set1|
-    if (@board[set1[0]] == @board[set1[1]] && @board[set1[1]]  == @board[set1[2]])
-      if (@board[set1[0]] != " ")
-        return set1
+    #win
+    WIN_COMBINATIONS.each do |set1|
+      if (@board[set1[0]] == @board[set1[1]] && @board[set1[1]]  == @board[set1[2]])
+        if (@board[set1[0]] != " ")
+          return set1
+        end
       end
+    end
+
+    #draw
+
+    if(full?() == true)
+      return false
+    end
+
+  end
+
+  def full? (
+    emptyfield = @board.detect do |field|
+      field == " "
+    end
+
+    if (emptyfield == nil)
+      return true
+    else
+      return false
     end
   end
 
-  #draw
 
-  if(full?() == true)
-    return false
+  def draw? (
+
+      wina = won?()
+    if !(wina == false)
+      return false
+    end
+
+    if(full?() == true)
+      return true
+    end
   end
-
-end
-
-
 
 
 end
