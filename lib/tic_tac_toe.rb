@@ -44,7 +44,7 @@ class TicTacToe
     end
   end
 
-  def turn_count 
+  def turn_count
     count = 0
     @board.each do |element|
       if element != " "
@@ -54,13 +54,13 @@ class TicTacToe
     return count
   end
 
-  def current_player(
-    if turn_count % 2 == 0
+  def current_player
+    if turn_count() % 2 == 0
       "X"
-    else turn_count % 2 == 1
+    else turn_count() % 2 == 1
       "O"
     end
   end
-  
+
 
 end
