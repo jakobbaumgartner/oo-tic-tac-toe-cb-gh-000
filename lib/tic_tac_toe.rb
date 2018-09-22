@@ -62,7 +62,7 @@ class TicTacToe
     end
   end
 
-  def won? 
+  def won?
 
   #empty field
   empty = @board.all? do |field|
