@@ -62,10 +62,10 @@ class TicTacToe
     end
   end
 
-  def won? (board)
+  def won? 
 
   #empty field
-  empty = board.all? do |field|
+  empty = @board.all? do |field|
     field == " "
   end
 
@@ -75,8 +75,8 @@ class TicTacToe
 
   #win
   WIN_COMBINATIONS.each do |set1|
-    if (board[set1[0]] == board[set1[1]] && board[set1[1]]  == board[set1[2]])
-      if (board[set1[0]] != " ")
+    if (@board[set1[0]] == @board[set1[1]] && @board[set1[1]]  == @board[set1[2]])
+      if (@board[set1[0]] != " ")
         return set1
       end
     end
@@ -84,7 +84,7 @@ class TicTacToe
 
   #draw
 
-  if(full?(board) == true)
+  if(full?() == true)
     return false
   end
 
