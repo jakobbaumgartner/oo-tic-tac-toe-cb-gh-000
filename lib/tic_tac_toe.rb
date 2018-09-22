@@ -90,7 +90,7 @@ class TicTacToe
 
   end
 
-  def full?
+  def full? ()
     emptyfield = @board.detect do |field|
       field == " "
     end
