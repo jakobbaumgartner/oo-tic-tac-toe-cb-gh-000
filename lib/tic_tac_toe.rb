@@ -120,7 +120,7 @@ class TicTacToe
     return true
   end
 
-  if won? ()
+  if won?()
     return true
   else
     return false
