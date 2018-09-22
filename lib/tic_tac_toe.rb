@@ -127,7 +127,7 @@ class TicTacToe
   end
 end
 
-def winner
+def winner ()
 
   if draw? ()
     return nil
